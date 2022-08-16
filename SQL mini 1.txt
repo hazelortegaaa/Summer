@@ -1,0 +1,40 @@
+CREATE TABLE Video(
+Id INT PRIMARY KEY,
+Title VARCHAR(50) NOT NULL,
+Lenght INT NULL,
+Url VARCHAR(100) NOT NULL
+	
+);
+
+INSERT INTO Video (Id, Title, Lenght, Url) values (1, 'After The Storm', '3', 'https://www.youtube.com/watch?v=9f5zD7ZSNpQ');
+
+INSERT INTO Video (Id, Title, Lenght, Url) values (2, 'telepatia', '2', 'https://www.youtube.com/watch?v=bn_p95HbHoQ');
+
+INSERT INTO Video (Id, Title, Lenght, Url) values (3, 'LOST YOU', '3', 'https://www.youtube.com/watch?v=YKeXXnyvMgI');
+
+INSERT INTO Video (Id, Title, Lenght, Url) values (4, 'NEON PEACH', '3', 'https://www.youtube.com/watch?v=9MAY18j9Quo');
+
+SELECT * FROM video
+
+
+CREATE TABLE Reviewers (
+    User VARCHAR(50) NOT NULL,
+	Rating INT NULL,
+	Review VARCHAR(50),
+	VidId, INT REFERENCES Reviewers
+
+
+);
+
+INSERT INTO Reviewers(ID, Title, Lenght, URL) values (1, 'After The Storm', '3', 'https://www.youtube.com/watch?v=9f5zD7ZSNpQ');
+);
+
+INSERT INTO Reviewers(User, Rating, Review, vidId) values ('Asher', 10, 'Loved it!', 10);
+INSERT INTO Reviewers(User, Rating, Review, vidId) values ('John', 10, 'Love Kali, she is great.', 5);
+INSERT INTO Reviewers(User, Rating, Review, vidId) values ('Sam', 10, 'She's getting better but not my favorite song..', 5);
+
+
+);
+
+
+SELECT * FROM Reviewers;
